@@ -7,3 +7,4 @@ gem 'twitter', '>= 5.9.0'
 
 gem 'puma'
 gem 'faraday'
+gem 'google-api-client'
