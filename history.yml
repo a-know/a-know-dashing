@@ -1,21 +1,21 @@
 --- 
 buzzwords: |+
-  data: {"items":[{"label":"Paradigm shift","value":14},{"label":"Enterprise","value":18},{"label":"Synergy","value":17},{"label":"Exit strategy","value":10},{"label":"Pivoting","value":10},{"label":"Web 2.0","value":18},{"label":"Streamlininess","value":21},{"label":"Turn-key","value":12},{"label":"Leverage","value":5}],"id":"buzzwords","updatedAt":1436793552}
+  data: {"items":[{"label":"Leverage","value":1},{"label":"Paradigm shift","value":1},{"label":"Enterprise","value":2},{"label":"Pivoting","value":1},{"label":"Web 2.0","value":1}],"id":"buzzwords","updatedAt":1436794298}
   
 convergence: |+
-  data: {"points":[{"x":126,"y":35},{"x":127,"y":39},{"x":128,"y":18},{"x":129,"y":10},{"x":130,"y":31},{"x":131,"y":29},{"x":132,"y":34},{"x":133,"y":25},{"x":134,"y":6},{"x":135,"y":43}],"id":"convergence","updatedAt":1436793552}
+  data: {"points":[{"x":7,"y":28},{"x":8,"y":17},{"x":9,"y":3},{"x":10,"y":19},{"x":11,"y":48},{"x":12,"y":32},{"x":13,"y":40},{"x":14,"y":24},{"x":15,"y":46},{"x":16,"y":49}],"id":"convergence","updatedAt":1436794298}
   
 valuation: |+
-  data: {"current":78,"last":6,"id":"valuation","updatedAt":1436793552}
+  data: {"current":27,"last":84,"id":"valuation","updatedAt":1436794298}
   
 karma: |+
-  data: {"current":56091,"last":89026,"id":"karma","updatedAt":1436793552}
+  data: {"current":56415,"last":95646,"id":"karma","updatedAt":1436794298}
   
 synergy: |+
-  data: {"value":98,"id":"synergy","updatedAt":1436793552}
+  data: {"value":2,"id":"synergy","updatedAt":1436794298}
   
 fizz_buzz: |+
-  data: {"value":"fizz","id":"fizz_buzz","updatedAt":1436793552}
+  data: {"value":"fizz","id":"fizz_buzz","updatedAt":1436794296}
   
 welcome: |+
   data: {"text":"Hey, Look what I can do!","id":"welcome","updatedAt":1436792726}
