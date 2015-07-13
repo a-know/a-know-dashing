@@ -101,9 +101,9 @@ class PushEvent < GithubEvent
 
 end
 
-user         = "your user name in the organization"
-org          = "name of your organization"
-token        = "token"
+user         = ENV['GITHUB_USER_NAME']
+org          = ENV['GITHUB_ORG']
+token        = ENV['GITHUB_TOKEN']
 hist_size    = 5
 
 SCHEDULER.every '30s', :first_in => 0 do
