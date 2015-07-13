@@ -88,5 +88,6 @@ PLATFORMS
 
 DEPENDENCIES
   dashing
+  faraday
   puma
   twitter (>= 5.9.0)
