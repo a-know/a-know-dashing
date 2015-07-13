@@ -18,7 +18,7 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
         { name: tweet.user.name, body: tweet.text, avatar: tweet.user.profile_image_url_https }
       end
 
-      send_event('twitter_mentions', {comments: mentions})
+      send_event('twitter_mentions', {comments: mentions.first(10)})
     end
   rescue Twitter::Error
     puts "\e[33mThere was an error with Twitter\e[0m"

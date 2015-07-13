@@ -1,22 +1,23 @@
 --- 
 buzzwords: |+
-  data: {"items":[{"label":"Turn-key","value":6},{"label":"Pivoting","value":5},{"label":"Web 2.0","value":4},{"label":"Leverage","value":10},{"label":"Paradigm shift","value":8},{"label":"Streamlininess","value":6},{"label":"Enterprise","value":4},{"label":"Synergy","value":10},{"label":"Exit strategy","value":6}],"id":"buzzwords","updatedAt":1436795137}
+  data: {"items":[{"label":"Web 2.0","value":4},{"label":"Paradigm shift","value":2},{"label":"Synergy","value":3},{"label":"Pivoting","value":4},{"label":"Exit strategy","value":2},{"label":"Streamlininess","value":2},{"label":"Turn-key","value":3},{"label":"Enterprise","value":3}],"id":"buzzwords","updatedAt":1436795936}
   
 convergence: |+
-  data: {"points":[{"x":60,"y":46},{"x":61,"y":4},{"x":62,"y":3},{"x":63,"y":6},{"x":64,"y":21},{"x":65,"y":0},{"x":66,"y":3},{"x":67,"y":45},{"x":68,"y":10},{"x":69,"y":41}],"id":"convergence","updatedAt":1436795137}
+  data: {"points":[{"x":24,"y":36},{"x":25,"y":42},{"x":26,"y":31},{"x":27,"y":22},{"x":28,"y":33},{"x":29,"y":36},{"x":30,"y":22},{"x":31,"y":23},{"x":32,"y":17},{"x":33,"y":44}],"id":"convergence","updatedAt":1436795936}
   
 valuation: |+
-  data: {"current":55,"last":73,"id":"valuation","updatedAt":1436795137}
+  data: {"current":58,"last":82,"id":"valuation","updatedAt":1436795936}
   
 karma: |+
-  data: {"current":193256,"last":64699,"id":"karma","updatedAt":1436795137}
+  data: {"current":19259,"last":118428,"id":"karma","updatedAt":1436795936}
   
 synergy: |+
-  data: {"value":6,"id":"synergy","updatedAt":1436795137}
+  data: {"value":10,"id":"synergy","updatedAt":1436795936}
   
 fizz_buzz: |+
-  data: {"value":"fizz","id":"fizz_buzz","updatedAt":1436795134}
+  data: {"value":"buzz","id":"fizz_buzz","updatedAt":1436795935}
   
 welcome: |+
   data: {"text":"Hey, Look what I can do!","id":"welcome","updatedAt":1436792726}
   
+twitter_mentions: "data: {\"comments\":[{\"name\":\"\xE3\x81\x90\xE3\x82\x89\",\"body\":\"@a_know \xE3\x81\x9C\xE3\x81\xB2\xEF\xBC\x81\",\"avatar\":\"https://pbs.twimg.com/profile_images/378800000673472058/420a4a895fc45698cce95de91e5efea2_normal.png\"},{\"name\":\"Yuji Nakayama\",\"body\":\"@a_know :thumbsup: \xE3\x81\x8C\xE4\xB8\x8A\xE3\x81\xAB\xE6\x9D\xA5\xE3\x82\x8B\xE3\x82\x88\xE3\x81\x86\xE3\x81\xAB\xE5\xA4\x89\xE6\x9B\xB4\xE3\x81\x97\xE3\x81\xBE\xE3\x81\x97\xE3\x81\x9F\xEF\xBC\x81\",\"avatar\":\"https://pbs.twimg.com/profile_images/1617558820/doraemon-large_normal.png\"},{\"name\":\"\xE5\x8D\xB0\xE5\xBA\xA6\xE7\xA5\x9E\",\"body\":\"@a_know \xE3\x81\x84\xE3\x81\xA4\xE3\x81\x8B\xE3\x81\xA9\xE3\x81\x93\xE3\x81\x8B\xE3\x81\xA7\xE3\x83\xBB\xE3\x83\xBB\xE3\x83\xBB\xEF\xBC\x81\",\"avatar\":\"https://pbs.twimg.com/profile_images/479948281775026176/OW_y8GD3_normal.jpeg\"}],\"id\":\"twitter_mentions\",\"updatedAt\":1436795892}\n\n"
