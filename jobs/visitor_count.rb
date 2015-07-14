@@ -31,7 +31,8 @@ SCHEDULER.every '1m', :first_in => 0 do
   analytics = client.discovered_api('analytics','v3')
 
   # Start and end dates
-  startDate = (DateTime.now).strftime("%Y-%m-%d")
+  ENV['TZ'] = 'Asia/Tokyo'
+  startDate = Time.now.strftime("%Y-%m-%d")
   endDate = startDate
 
   # Execute the query
