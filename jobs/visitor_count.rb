@@ -2,23 +2,24 @@ require 'google/api_client'
 require 'date'
 
 # Update these to match your own apps credentials
-service_account_email = '[YOUR SERVICE ACCOUNT EMAIL]' # Email of service account
-key_file = 'path/to/your/keyfile.p12' # File containing your private key
-key_secret = 'notasecret' # Password to unlock private key
-profileID = '[YOUR PROFILE ID]' # Analytics profile ID.
+service_account_email = ENV['SERVICE_ACCOUNT_EMAIL'] # Email of service account
+profile_id = ENV['PROFILE_ID'] # Analytics profile ID.
 
 # Get the Google API client
-client = Google::APIClient.new(:application_name => '[YOUR APPLICATION NAME]', 
-  :application_version => '0.01')
+client = Google::APIClient.new(
+  :application_name => ENV['APPLICATION_NAME'],
+  :application_version => '0.01'
+)
 
-# Load your credentials for the service account
-key = Google::APIClient::KeyUtils.load_from_pkcs12(key_file, key_secret)
+key = OpenSSL::PKey::RSA.new(ENV['A_KNOW_GOOGLE_API_KEY'])
 client.authorization = Signet::OAuth2::Client.new(
   :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
-  :audience => 'https://accounts.google.com/o/oauth2/token',
-  :scope => 'https://www.googleapis.com/auth/analytics.readonly',
-  :issuer => service_account_email,
-  :signing_key => key)
+  :audience             => 'https://accounts.google.com/o/oauth2/token',
+  :scope                => 'https://www.googleapis.com/auth/analytics.readonly',
+  :issuer               => service_account_email,
+  :signing_key          => key,
+)
+
 
 # Start the scheduler
 SCHEDULER.every '1m', :first_in => 0 do
@@ -30,17 +31,17 @@ SCHEDULER.every '1m', :first_in => 0 do
   analytics = client.discovered_api('analytics','v3')
 
   # Start and end dates
-  startDate = DateTime.now.strftime("%Y-%m-01") # first day of current month
-  endDate = DateTime.now.strftime("%Y-%m-%d")  # now
+  startDate = (DateTime.now).strftime("%Y-%m-%d")
+  endDate = startDate
 
   # Execute the query
-  visitCount = client.execute(:api_method => analytics.data.ga.get, :parameters => { 
-    'ids' => "ga:" + profileID, 
+  visitCount = client.execute(:api_method => analytics.data.ga.get, :parameters => {
+    'ids' => "ga:" + profile_id,
     'start-date' => startDate,
     'end-date' => endDate,
     # 'dimensions' => "ga:month",
-    'metrics' => "ga:visitors",
-    # 'sort' => "ga:month" 
+    'metrics' => "ga:pageviews",
+    # 'sort' => "ga:month"
   })
 
   # Update the dashboard
