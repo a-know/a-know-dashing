@@ -6,7 +6,7 @@ class Fitbit
 
   def initialize(options = {})
     @options = options
-    @config  = Fitgem::Client.symbolize_keys YAML.load(ERB.new(File.open(".fitbit.yml")).result)
+    @config  = Fitgem::Client.symbolize_keys YAML.load(ERB.new(IO.read(".fitbit.yml")).result)
     @client  = Fitgem::Client.new config[:oauth].merge!(options)
   end
 

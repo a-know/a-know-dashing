@@ -4,7 +4,7 @@ require "fitgem"
 require "yaml"
 require "erb"
 
-config = Fitgem::Client.symbolize_keys YAML.load(ERB.new(File.open(".fitbit.yml")).result)
+config = Fitgem::Client.symbolize_keys YAML.load(ERB.new(IO.read(".fitbit.yml")).result)
 client = Fitgem::Client.new config[:oauth]
 request_token = client.request_token
 
