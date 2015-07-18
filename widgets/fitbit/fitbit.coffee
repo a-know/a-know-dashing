@@ -12,6 +12,7 @@ class Dashing.Fitbit extends Dashing.Widget
       @error = data.error
     else
       @animate = data.animate
+      @show    = data.show
       @error   = null
       @index   = 0
 
@@ -76,16 +77,18 @@ class Dashing.Fitbit extends Dashing.Widget
 
   findNextIndex: ->
     @index = (@index + 1)
-    @index = 0 if @index > @lastIndex()
+    #@index = 0 if @index > @lastIndex()
+    @index = 0 if @show.length == 1
+    @index = 0 if @index > @show.length - 1
 
   lastIndex: ->
     @views().length - 1
 
   firstView: ->
-    $(@views()[0])
+    $(@views()[@show[0]])
 
   currentView: (index) ->
-    $(@views()[index])
+    $(@views()[@show[index]])
 
   views: ->
     $(@node).find(".views li")
