@@ -36,6 +36,8 @@ GEM
     extlib (0.9.16)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    fitgem (0.12.1)
+      oauth
     google-api-client (0.8.2)
       activesupport (>= 3.2)
       addressable (~> 2.3)
@@ -46,6 +48,8 @@ GEM
       multi_json (~> 1.10)
       retriable (~> 1.4)
       signet (~> 0.6)
+    haml (4.0.6)
+      tilt
     hike (1.2.3)
     http (0.6.4)
       http_parser.rb (~> 0.6.0)
@@ -61,6 +65,7 @@ GEM
     multi_json (1.11.2)
     multipart-post (2.0.0)
     naught (1.0.0)
+    oauth (0.4.7)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.5.5)
@@ -122,6 +127,8 @@ PLATFORMS
 DEPENDENCIES
   dashing
   faraday
+  fitgem
   google-api-client
+  haml
   puma
   twitter (>= 5.9.0)
