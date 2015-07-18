@@ -1,13 +1,74 @@
-$background-color: #15aaaa
 $intensity_none: #5ac7c8
 $intensity_light: #ff6d43
 $intensity_moderate: #ffc807
 $intensity_high: #9ade11
 $highlight: #14a1a1
 
+.fitbit1
+  $background-color1: #1abc9c
+  background-color: $background-color1
+  #data
+    ul.views
+      li
+        .goal
+          color: lighten($background-color1, 10%)
+    &.animate
+      ul.views
+        li
+          &.intensity_none, &.intensity_light, &.intensity_moderate, &.intensity_high
+            input
+              background-color: darken($background-color1, 2%)
+  p
+    &.updated-at
+      color: lighten($background-color1, 15%)
+  ul
+    &.device
+      color: lighten($background-color1, 10%)
+
+.fitbit2
+  $background-color2: #3498db
+  background-color: $background-color2
+  #data
+    ul.views
+      li
+        .goal
+          color: lighten($background-color2, 10%)
+    &.animate
+      ul.views
+        li
+          &.intensity_none, &.intensity_light, &.intensity_moderate, &.intensity_high
+            input
+              background-color: darken($background-color2, 2%)
+  p
+    &.updated-at
+      color: lighten($background-color2, 15%)
+  ul
+    &.device
+      color: lighten($background-color2, 10%)
+
+.fitbit3
+  $background-color3: #9b59b6
+  background-color: $background-color3
+  #data
+    ul.views
+      li
+        .goal
+          color: lighten($background-color3, 10%)
+    &.animate
+      ul.views
+        li
+          &.intensity_none, &.intensity_light, &.intensity_moderate, &.intensity_high
+            input
+              background-color: darken($background-color3, 2%)
+  p
+    &.updated-at
+      color: lighten($background-color3, 15%)
+  ul
+    &.device
+      color: lighten($background-color3, 10%)
+
 .widget-fitbit
   position: relative
-  background-color: $background-color
 
   h1
     position: absolute
@@ -51,7 +112,6 @@ $highlight: #14a1a1
           text-transform: uppercase
           font-size: 12px
           font-weight: 400
-          color: lighten($background-color, 10%)
 
         &.steps
           .icon
@@ -121,10 +181,6 @@ $highlight: #14a1a1
 
             .bar
               display: none
-
-          &.intensity_none, &.intensity_light, &.intensity_moderate, &.intensity_high
-            input
-              background-color: darken($background-color, 2%)
 
           &.intensity_none
             input
@@ -262,7 +318,6 @@ $highlight: #14a1a1
       text-transform: uppercase
       letter-spacing: 1px
       font-size: 10px
-      color: lighten($background-color, 15%)
 
   ul
     &.device
@@ -274,7 +329,6 @@ $highlight: #14a1a1
       letter-spacing: 1px
       font-size: 9px
       font-weight: normal
-      color: lighten($background-color, 10%)
 
       li
         display: inline-block
