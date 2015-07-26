@@ -1,0 +1,1 @@
+class Dashing.HatebuFavsTl extends Dashing.Widget
