@@ -1,0 +1,20 @@
+<div class="header">
+  <i class="icon icon-bookmark"></i>
+  <h1 class="title" data-bind="title"></h1>
+</div>
+
+<li class="content-area" data-foreach-item="items">
+  <div class="bookmark-container">
+    <p class="ago" data-bind="item.ago"></p>
+    <div class="bookmark-content">
+      <img data-bind-src="item.favicon">
+      <span class="target-page-title" data-bind="item.title"></span>
+      <div class="gh-feed-message">
+        <i data-bind="item.comment"></i>
+        <img data-bind-src="item.icon_url">
+        (id: <span data-bind="item.user"></span>)
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</li>
