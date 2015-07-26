@@ -13,7 +13,7 @@ class HatebuFavsRss
   end
 
   def items
-    items = RSS::Parser.parse("http://b.hatena.ne.jp/#{@user}/favorite.rss").items
+    items = RSS::Parser.parse("http://b.hatena.ne.jp/#{@user}/favorite.rss?date=#{Time.now.to_i}").items
   end
 end
 
@@ -60,7 +60,7 @@ class Bookmark
   end
 end
 
-SCHEDULER.every '1m', :first_in => 0 do
+SCHEDULER.every '5m', :first_in => 0 do
   rss = HatebuFavsRss.new(user)
   items = rss.items.map do |item|
     bookmark = Bookmark.new(item)
