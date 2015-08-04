@@ -60,7 +60,7 @@ class Bookmark
   end
 end
 
-SCHEDULER.every '5m', :first_in => 0 do
+SCHEDULER.every '1m', :first_in => 0 do
   rss = HatebuFavsRss.new(user)
   items = rss.items.map do |item|
     bookmark = Bookmark.new(item)
