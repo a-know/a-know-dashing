@@ -16,25 +16,7 @@ SCHEDULER.every "5m", first_in: 0 do |job|
       distance: fitbit.distance,
       active:   fitbit.active,
       animate:  animate_views,
-      show:     [0, 1] #steps
-    }
-    send_event "fitbit2", {
-      device:   fitbit.device,
-      steps:    fitbit.steps,
-      calories: fitbit.calories,
-      distance: fitbit.distance,
-      active:   fitbit.active,
-      animate:  animate_views,
-      show:     [2, 5] #calories, active times
-    }
-    send_event "fitbit3", {
-      device:   fitbit.device,
-      steps:    fitbit.steps,
-      calories: fitbit.calories,
-      distance: fitbit.distance,
-      active:   fitbit.active,
-      animate:  animate_views,
-      show:     [3, 4] #distances
+      show:     [0, 3, 2] #steps, distance, calories
     }
   end
 end
