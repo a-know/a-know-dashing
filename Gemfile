@@ -12,3 +12,6 @@ gem 'google-api-client'
 # for fitbit
 gem 'fitgem'
 gem 'haml'
+
+# for ff-human-resource
+gem 'google_drive'
