@@ -38,5 +38,5 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
   ws = session.spreadsheet_by_key(ENV['DASHING_TARGET_SPREAD_SHEET_ID']).worksheets[0]
 
   a = ws[2,2]
-  send_event('aiben', { value: a  })
+  send_event('sougou_offer', { value: a  })
 end

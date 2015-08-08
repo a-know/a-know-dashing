@@ -1,4 +1,4 @@
-class Dashing.Aiben extends Dashing.Widget
+class Dashing.SougouOffer extends Dashing.Widget
   @accessor 'current', Dashing.AnimatedValue
 
   @accessor 'difference', ->
