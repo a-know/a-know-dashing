@@ -2,3 +2,4 @@
 .bundle/
 history.yml
 vendor/
+credential-oauth2.json
