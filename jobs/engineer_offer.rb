@@ -5,7 +5,7 @@ require 'google/api_client/auth/installed_app'
 require 'google_drive'
 
 
-def setup()
+def authorize
   client = Google::APIClient.new(:application_name => 'Get Value from Google SpreadSheet with Dashing',
       :application_version => '1.0.0')
 
@@ -26,10 +26,10 @@ def setup()
     client.authorization = file_storage.authorization
   end
 
-  return client
+  client
 end
 
-client = setup()
+client = authorize
 
 SCHEDULER.every '10m', :first_in => 0 do |job|
   session = GoogleDrive.login_with_oauth(client.authorization.access_token)
