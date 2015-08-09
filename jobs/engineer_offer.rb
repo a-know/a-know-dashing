@@ -31,7 +31,7 @@ end
 
 client = setup()
 
-SCHEDULER.every '10s', :first_in => 0 do |job|
+SCHEDULER.every '10m', :first_in => 0 do |job|
   session = GoogleDrive.login_with_oauth(client.authorization.access_token)
   ws = session.spreadsheet_by_key(ENV['DASHING_TARGET_SPREAD_SHEET_ID']).worksheets[1]
 
